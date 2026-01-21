@@ -2,18 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentine's Day Flip Book</title>
+  <title>I LOVE YOU</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffeef2; /* Warna pink soft biar cantik */
+      font-family: 'Short Stack', cursive;
+      overflow-x: hidden;
+    }
+    #hedlinecontainer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    /* Gaya untuk tombol musik agar rapi di tengah */
+    .audio-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 80%; /* Ukuran pas untuk HP */
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
 
-  <audio id="myAudio" loop>
-    <source src="gokil.mp3" type="audio/mpeg">
-  </audio>
-
   <div id="hedlinecontainer">
-    <div id="shine">My GF Candra's kirana Wijaya 💕</div>
+    <div id="shine">Happy Valentine's Day 💕</div>
+  </div>
+
+  <div class="audio-wrapper">
+    <audio id="myAudio" controls loop>
+      <source src="gokil.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
   </div>
 
   <div class="gallery">
@@ -27,7 +61,7 @@
     document.addEventListener('click', function() {
       var audio = document.getElementById("myAudio");
       audio.play().catch(function(error) {
-        console.log("Browser memblokir musik, klik sekali lagi.");
+        console.log("Klik tombol play untuk suara.");
       });
     }, { once: true });
   </script>
